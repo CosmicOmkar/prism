@@ -1,0 +1,21 @@
+<!--  index.html  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> URL </title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> submit url </button>
+    </form>
+
+    {% if predicted_price %}
+    <div>
+        <h2> url type : ${{ predicted_price }}</h2>
+    </div>
+    {% endif %}
+</body>
+</html>
